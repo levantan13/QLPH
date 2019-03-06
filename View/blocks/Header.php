@@ -1,14 +1,12 @@
 <div class="container-fluid">
-	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-	    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    		<div class="row">
-	    			<div class="col-4">
-	    				Logo
-	    			</div>
-	    			<div class="col-8">
+	<div class="row bg-dark border-dark">
+	    <div class="col-lg-6 text-white text-left">
+	    				<?php
+							echo date(" l"). date(", d/m/Y").date(", h:i:a");
+						?>
+	    </div>
+	    <div class="col-lg-6">
 	    				Baner
-	    			</div>
-	    		</div>
-	    	</div>
-	    </nav>
+	    </div>
+	</div>
 </div>

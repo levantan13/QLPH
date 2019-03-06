@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Phòng Máy Tính TDC</title>
+  <link rel="stylesheet" type="text/css" href="/css/twocol-blog.css">
+  <link rel="icon" href="http://tdc.edu.vn/wp-content/themes/i-excel/images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <script src="bootstrap/js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
