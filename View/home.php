@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Phòng Máy Tính TDC</title>
-  <link rel="stylesheet" type="text/css" href="/css/twocol-blog.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
   <link rel="icon" href="http://tdc.edu.vn/wp-content/themes/i-excel/images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <script src="bootstrap/js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   
 </head>
-
 <body>
   <!-- Header -->
-  <div>
+  <div class="container-fluid header">
     <?php
     require("blocks/Header.php"); 
     ?>
   </div>
   <!-- End Header -->
+
   <!-- Menu -->
   <div class="container-fluid">
     <?php
@@ -27,19 +27,35 @@
     ?>
   </div>
   <!-- End Menu -->
+  
+<div class="container-fluid content">
+<div class="row">
+  <!--Left-->
+  <div class="col-lg-3 border border-dark">
+    Left
+  </div>
+  <!--End Left-->
 
   <!-- Slide-->
-  <div class="container">
+
+  <div class="col-lg-6 border border-dark">
     <?php
     require("blocks/main_slide.php");
     ?>
   </div>
   <!-- End Slide -->
+    <!--Right-->
+      <div class="col-lg-3 border border-dark">
+    Right
+  </div>
+  <!--End right-->
+</div>
+</div>
 
   <!-- Page Content -->
   <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="my-4">Phòng Học TDC</h1>
+    <h1 class="border border-dark bg-primary">Phòng Học TDC</h1>
     <div class="row">
       <!--vòng lặp foreach-->
       <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
@@ -49,7 +65,7 @@
             <h4 class="text-white">Phòng B002A</h3>
             </div>
             <div class="card-body">
-              <p class="text-justify">phòng học đồ hoạ></p>
+              <p class="text-justify">phòng học đồ hoạ</p>
               <hr>
               <?php require("form_phanhoi.php");?>
             </div>

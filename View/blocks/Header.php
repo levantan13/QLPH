@@ -1,12 +1,15 @@
-<div class="container-fluid">
-	<div class="row bg-dark border-dark">
-	    <div class="col-lg-6 text-white text-left">
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	    	<div class="row">
+	    			<div class="col-lg-10">
+	    				<span class="text-white">
 	    				<?php
 							echo date(" l"). date(", d/m/Y").date(", h:i:a");
 						?>
-	    </div>
-	    <div class="col-lg-6">
+	    				</span>
+
+	    			</div>
+	    			<div class="col-lg-2">
 	    				Baner
-	    </div>
-	</div>
-</div>
+	    			</div>
+	    	</div>
+	    </nav>

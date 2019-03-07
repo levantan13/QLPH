@@ -1,0 +1,8 @@
+.header { padding-bottom: 5px; }
+
+.menutop li { padding-right: 5px; }
+.menutop li:hover { background: blue; color: red; }
+
+.content { padding: 2px 30px !important; }
+
+/*# sourceMappingURL=style.css.map */
