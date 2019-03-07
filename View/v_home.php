@@ -14,20 +14,21 @@
 <body>
   <!-- Header -->
   <div class="container-fluid header">
-    <?php
-    require("blocks/Header.php"); 
-    ?>
+    <?php require("blocks/Header.php")?>
   </div>
-  <!-- End Header -->
+
+<div class="container-fluid">
+  <!--Baner top-->
+    <div class="header"><?php require("blocks/banertop.php")?></div>
+  <!--End Baner top-->
 
   <!-- Menu -->
-  <div class="container-fluid">
-    <?php
+     <?php
     require("blocks/menu.php");
-    ?>
-  </div>
+  ?>
+ 
   <!-- End Menu -->
-  
+
 <div class="container-fluid content">
 <div class="row">
   <!--Left-->
@@ -55,10 +56,25 @@
   <!-- Page Content -->
   <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="border border-dark bg-primary">Phòng Học TDC</h1>
     <div class="row">
       <!--vòng lặp foreach-->
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card border border-primary">
+          <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
+          <div class="card-header bg-primary">
+            <h4 class="text-white">Phòng B002A</h3>
+            </div>
+            <div class="card-body">
+              <p class="text-justify">phòng học đồ hoạ</p>
+              <hr>
+              <?php require("form_phanhoi.php");?>
+            </div>
+            <div class="card-footer">
+              <h6 class="card-title text-primary font-weight-bold"><a href="#">Xem chi tiết</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="card border border-primary">
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
           <div class="card-header bg-primary">
@@ -138,6 +154,14 @@
     <!-- /.container -->
   </div>
   <!-- End page Content -->
+</div>
+
+  </div>
+  <!-- End Header -->
+
+
+  
+
   <!-- Footer -->
   <div class="container-fluid">
     <?php
