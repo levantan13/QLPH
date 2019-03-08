@@ -1,6 +1,6 @@
-function qlphonghoc(evt, qlphong) {
+function sodophonghoc(evt, sd_phong_hoc) {
   var i, x, tablinks;
-  x = document.getElementsByClassName("phonghoc");
+  x = document.getElementsByClassName("sd_phonghoc");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
@@ -8,6 +8,7 @@ function qlphonghoc(evt, qlphong) {
   for (i = 0; i < x.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
   }
-  document.getElementById(qlphong).style.display = "block";
+  document.getElementById(sd_phong_hoc).style.display = "block";
   evt.currentTarget.className += " w3-red";
 }
+

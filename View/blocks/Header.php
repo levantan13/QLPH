@@ -9,7 +9,6 @@
 
 	    			</div>
 	    			<div class="col-lg-2">
-	    				Baner
 	    			</div>
 	    	</div>
 	    </nav>
