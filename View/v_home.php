@@ -15,21 +15,17 @@
   
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header 
   <div class="container-fluid header">
-
-    <?php require("blocks/Header.php")?>
+  
   </div>
   <!-- End Header -->
 
   <!--Baner top-->
-  <div class="container-fluid header">
+  <div class="container-fluid>
     <?php require("blocks/banertop.php")?>
   </div>
   <!--End Baner top-->
-
-
-
   <!-- Menu -->
   <div class="container-fluid">
      <?php
@@ -41,19 +37,24 @@
 <div class="container-fluid content">
 <div class="row">
   <!--Left-->
-  <div class="col-lg-3 border border-dark">
-    Left
+  <div class="col-lg-3 border border-primary">
+    <div class="card">
+
+      
+    </div> 
+    <a href="#">Thông tin phản hồi phòng học ?</a>
+
   </div>
   <!--End Left-->
 
   <!-- Slide-->
-  <div class="col-lg-6 border border-dark">
+  <div class="col-lg-9 border border-primary">
     <?php
     require("blocks/main_slide.php");
     ?>
   </div>
   <!-- End Slide -->
-    <!--Right-->
+    <!--Right
       <div class="col-lg-3 border border-dark">
     Right
   </div>
@@ -66,7 +67,9 @@
  <?php require("blocks/menu_center.php");?>
   </div>
  <!-- End Page Content -->
-
+  <div class="container-fluid header">
+ <?php require("v_ph_content.php");?>
+  </div>
   <!-- Footer -->
   <div class="container-fluid">
     <?php
@@ -74,7 +77,13 @@
     ?>
   </div>
   <!-- End Footer -->
-
-<script src="bootstrap/js/script.js"></script>
+<a href="#" class="go-top animated bounce" style="display: block;"><span class="genericon genericon-collapse">top</span></a>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
 </body>
 </html>

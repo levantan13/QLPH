@@ -1,5 +1,6 @@
 <!-- Page Heading -->
-    <h1 class="border border-dark bg-primary">Phòng Học TDC</h1>
+    <h1>Phòng Học TDC</h1>
+    <hr>
     <div class="row">
       <!--vòng lặp foreach-->
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
