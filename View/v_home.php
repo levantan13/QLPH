@@ -15,22 +15,20 @@
   
 </head>
 <body>
-  <!-- Header 
-  <div class="container-fluid header">
-  
-  </div>
-  <!-- End Header -->
-
   <!--Baner top-->
-  <div class="container-fluid>
-    <?php require("blocks/banertop.php")?>
-  </div>
-  <!--End Baner top-->
+<div class="container-fluid header">
+       <?php
+    require("blocks/banertop.php");
+    ?>
+</div>
+
+  <!--End Baner top -->
+
   <!-- Menu -->
-  <div class="container-fluid">
+<div class="container-fluid">
      <?php
     require("blocks/menu_top.php");
-  ?>
+    ?>
   </div>
   <!-- End Menu -->
 
@@ -54,11 +52,7 @@
     ?>
   </div>
   <!-- End Slide -->
-    <!--Right
-      <div class="col-lg-3 border border-dark">
-    Right
-  </div>
-  <!--End right-->
+
 </div>
 </div>
 
