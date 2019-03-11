@@ -9,14 +9,28 @@
 			background:blue;
 			color:red;
 		}
-		padding-right: 5px; 
+		border: 1px solid;
+		border-color: white;
+		margin-right:2px !important; 
+
 	}
+
 }
 .content
 {
 	padding:2px 30px !important;
 }
-.menuceter
+
+.menucenter
 {
+	li{
+		border-right: 5px;
+		border-right-style: double;
+		margin-right: 5px !important;
+		border-color: white;
+		color: white !important;
+	}
+	
+	
 
 }

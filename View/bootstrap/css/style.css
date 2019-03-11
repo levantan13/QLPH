@@ -1,8 +1,10 @@
 .header { padding-bottom: 1px; }
 
-.menutop li { padding-right: 5px; }
+.menutop li { border: 1px solid; border-color: white; margin-right: 2px !important; }
 .menutop li li:hover { background: blue; color: red; }
 
 .content { padding: 2px 30px !important; }
+
+.menucenter li { border-right: 5px; border-right-style: double; margin-right: 5px !important; border-color: white; color: white !important; }
 
 /*# sourceMappingURL=style.css.map */

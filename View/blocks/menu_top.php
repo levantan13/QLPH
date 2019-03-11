@@ -5,13 +5,14 @@
 	</button>
 			
 		<div class="collapse navbar-collapse text-left"  id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
+		<ul class="navbar-nav mr-auto text-center">
 			<li class="nav-item active">
-				<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="index.php"><i class="fas fa-2x fa-home"></i> 
+					<span class="sr-only">(current)</span><br>Home</a>
 			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Phòng máy
+			<li class="nav-item dropdown text-center">
+				<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-2x fa-desktop"></i><br>P.Máy tính
+					
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<?php
@@ -27,7 +28,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Liên hệ</a>
+					<a class="nav-link" href="#"><i class="fas fa-2x fa-phone"></i><br>Liên hệ</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">

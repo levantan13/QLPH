@@ -1,11 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary menucenter">
-	
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item border border-info">
-				<a class="nav-link" href="index.php"><i class="fas fa-3x fa-home"></i><br> Home </a>
+	    <ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="../view/v_ph_khuvuc.php"><i class="fas fa-3x fa-map-signs"></i><br> <span>Phòng học <br> theo khu</span></a>
 			</li>
-			<li class="nav-item border border-info">
-				<a class="nav-link meucenter" href="#"><i class="fas fa-3x fa-phone"></i><br>Liên hệ</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-3x fa-atlas"></i><br>Phòng học <br> theo chức năng</a>
 			</li>
 		</ul>
 
