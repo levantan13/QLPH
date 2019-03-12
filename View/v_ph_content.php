@@ -1,13 +1,12 @@
-<!-- Page Heading -->
-    <h1>Phòng Học TDC</h1>
-    <hr>
-    <div class="row">
+    <!-- Content -->
+<div class="text-left"><h3>Phòng máy tính</h3></div>
+<div class="row">
       <!--vòng lặp foreach-->
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="card border border-primary">
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
           <div class="card-header bg-primary">
-            <h4 class="text-white">Phòng B002A</h3>
+            <h4 class="text-white">Phòng B002A</h4>
             </div>
             <div class="card-body">
               <p class="text-justify">phòng học đồ hoạ</p>
@@ -23,7 +22,7 @@
         <div class="card border border-primary">
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
           <div class="card-header bg-primary">
-            <h4 class="text-white">Phòng B002A</h3>
+            <h4 class="text-white">Phòng B002A</h4>
             </div>
             <div class="card-body">
               <p class="text-justify">phòng học đồ hoạ</p>
@@ -39,7 +38,23 @@
         <div class="card border border-primary">
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
           <div class="card-header bg-primary">
-            <h4 class="text-white">Phòng B002A</h3>
+            <h4 class="text-white">Phòng B002A</h4>
+            </div>
+            <div class="card-body">
+              <p class="text-justify">phòng học đồ hoạ</p>
+              <hr>
+              <?php require("form_phanhoi.php");?>
+            </div>
+            <div class="card-footer">
+              <h6 class="card-title text-primary font-weight-bold"><a href="#">Xem chi tiết</a></h6>
+            </div>
+          </div>
+        </div>
+         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card border border-primary">
+          <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
+          <div class="card-header bg-primary">
+            <h4 class="text-white">Phòng B002A</h4>
             </div>
             <div class="card-body">
               <p class="text-justify">phòng học đồ hoạ</p>
@@ -78,5 +93,6 @@
           </a>
         </li>
       </ul>
-
     </div>
+    <!-- End Content -->
+

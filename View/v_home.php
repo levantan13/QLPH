@@ -25,7 +25,7 @@
   <!--End Baner top -->
 
   <!-- Menu -->
-<div class="container-fluid">
+<div class="container-fluid sticky-top">
      <?php
     require("blocks/menu_top.php");
     ?>
@@ -37,10 +37,15 @@
   <!--Left-->
   <div class="col-lg-3 border border-primary">
     <div class="card">
-
+      <div class="card-head border border-primary">
+        <h5>Thông báo 1</h5>
+      </div>
+      <div class="card-body">
+        <a href="#">Thông tin phản hồi phòng học ?</a>
+      </div>
       
     </div> 
-    <a href="#">Thông tin phản hồi phòng học ?</a>
+    
 
   </div>
   <!--End Left-->
@@ -57,7 +62,7 @@
 </div>
 <!-- Menu center-->
 <div class="container-fluid">
-  <?php require("blocks/menu_center.php");?>
+ 
 </div>
 <!-- End Menu center-->
 

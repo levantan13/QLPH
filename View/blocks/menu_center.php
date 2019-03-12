@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary menucenter">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info menucenter">
 	    <ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" href="../view/v_ph_khuvuc.php"><i class="fas fa-3x fa-map-signs"></i><br> <span>Phòng học <br> theo khu</span></a>
