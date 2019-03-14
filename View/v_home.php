@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Phòng Học TDC</title>
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/w3.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap/font/css/all.min.css">
-  <link rel="icon" href="../images/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script src="bootstrap/js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="view/bootstrap/css/w3.css">
+  <link rel="stylesheet" type="text/css" href="view/bootstrap/css/style.css">
+  <link rel="stylesheet" type="text/css" href="view/bootstrap/font/css/all.min.css">
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+  <script src="view/bootstrap/js/jquery.min.js"></script>
+  <script src="view/bootstrap/js/bootstrap.min.js"></script>
+  <script src="view/bootstrap/js/script.js"></script>
   
 </head>
 <body>
   <!--Baner top-->
 <div class="container-fluid header">
        <?php
-    require("blocks/banertop.php");
+    require("banertop.php");
     ?>
 </div>
 
@@ -27,7 +27,7 @@
   <!-- Menu -->
 <div class="container-fluid sticky-top">
      <?php
-    require("blocks/menu_top.php");
+    require("menu_top.php");
     ?>
   </div>
   <!-- End Menu -->
@@ -53,7 +53,11 @@
   <!-- Slide-->
   <div class="col-lg-9 border border-primary">
     <?php
-    require("blocks/main_slide.php");
+      include("Controller/C_phonghoc.php");
+  $c_phong_hoc=new C_phonghoc();
+  $noi_dung=$c_phong_hoc->index();
+  $slide=$noi_dung['slide'];
+    require("main_slide.php");
     ?>
   </div>
   <!-- End Slide -->
@@ -68,13 +72,14 @@
 
   <!-- Page Content -->
    <div class="container-fluid header">
- <?php require("v_ph_content.php");?>
+ <?php 
+ require("v_ph_content.php");?>
   </div>
   <!-- End Page Content -->
   <!-- Footer -->
   <div class="container-fluid">
     <?php
-    require("blocks/Footer.php");
+    require("Footer.php");
     ?>
   </div>
   <!-- End Footer -->
