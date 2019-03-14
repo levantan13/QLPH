@@ -1,4 +1,3 @@
-    <!-- Content -->
 <div class="text-left"><h3>Phòng máy tính</h3></div>
 <div class="row">
       <!--vòng lặp foreach-->
