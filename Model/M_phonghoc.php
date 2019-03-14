@@ -17,7 +17,7 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}
 
-		public function Doc_phonghoc_theo_IDPhong($id_phonghoc)
+	public function Doc_phonghoc_theo_IDPhong($id_phonghoc)
 	{
 		$sql="select * from phong_hoc where id_phonghoc=?";
 		$this->setQuery($sql);
