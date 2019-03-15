@@ -10,12 +10,7 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}
 	
-	public function getPH()
-	{
-		$sql="select * from phong_hoc";
-		$this->setQuery($sql);
-		return $this->loadAllRows();
-	}
+
 
 	public function Doc_phonghoc_theo_IDPhong($id_phonghoc)
 	{

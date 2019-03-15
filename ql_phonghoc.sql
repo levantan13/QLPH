@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 13, 2019 lúc 01:24 PM
+-- Thời gian đã tạo: Th3 15, 2019 lúc 06:16 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.3.0
 
@@ -41,8 +41,15 @@ CREATE TABLE `chitiet_phonghoc` (
   `so_do` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `hinh` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `hinh_minhhoa` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `id_phanhoi` int(11) NOT NULL
+  `id_phanhoi` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chi tiết phòng học';
+
+--
+-- Đang đổ dữ liệu cho bảng `chitiet_phonghoc`
+--
+
+INSERT INTO `chitiet_phonghoc` (`id_chitiet_ph`, `id_phonghoc`, `ten_chitiet_ph`, `ten_chitiet_ph_khongdau`, `mo_ta_ngan_ph`, `mo_ta_chitiet_ph`, `dien_tich`, `suc_chua`, `id_vitri`, `so_do`, `hinh`, `hinh_minhhoa`, `id_phanhoi`) VALUES
+(4, 1, 'Phòng thực hành máy tính B002A', 'Phong-thuc-hanh-may-tinh-b002a', 'Phòng thực hành máy tính các môn tin học cơ bản và chuyên ngành đồ hoạ', 'Phòng thực hành máy tính các môn tin học cơ bản và chuyên ngành đồ hoạ thuộc dự án SP với các trang thiết bị chuyên các môn học multi media.', 30, 40, 5, 'so-do-phong-b002a.jpg', 'hinh-phong-b002a.jpg', 'phong-b002a.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -53,6 +60,7 @@ CREATE TABLE `chitiet_phonghoc` (
 CREATE TABLE `chitiet_thietbi` (
   `id_chitiet_tb` int(11) NOT NULL,
   `ten_chitiet_tb` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_chitiet_tb_khongdau` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `nhan_hieu` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `quy_cach` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `nam_sudung` date NOT NULL
@@ -62,8 +70,8 @@ CREATE TABLE `chitiet_thietbi` (
 -- Đang đổ dữ liệu cho bảng `chitiet_thietbi`
 --
 
-INSERT INTO `chitiet_thietbi` (`id_chitiet_tb`, `ten_chitiet_tb`, `nhan_hieu`, `quy_cach`, `nam_sudung`) VALUES
-(1, 'Máy tính để bàn', 'HP compaq pro 6300 MT ', 'CPU core i5, RAM 4 Gb, HDD 500 Gb, \r\nMàn hình HP 17 inch', '2013-01-01');
+INSERT INTO `chitiet_thietbi` (`id_chitiet_tb`, `ten_chitiet_tb`, `ten_chitiet_tb_khongdau`, `nhan_hieu`, `quy_cach`, `nam_sudung`) VALUES
+(1, 'Máy tính để bàn', '', 'HP compaq pro 6300 MT ', 'CPU core i5, RAM 4 Gb, HDD 500 Gb, \r\nMàn hình HP 17 inch', '2013-01-01');
 
 -- --------------------------------------------------------
 
@@ -74,6 +82,7 @@ INSERT INTO `chitiet_thietbi` (`id_chitiet_tb`, `ten_chitiet_tb`, `nhan_hieu`, `
 CREATE TABLE `loai_phong` (
   `id_loaiphong` int(11) NOT NULL,
   `ten_loaiphong` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_loaiphong_khongdau` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `ghi_chu` varchar(500) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Loại phòng học';
 
@@ -81,11 +90,11 @@ CREATE TABLE `loai_phong` (
 -- Đang đổ dữ liệu cho bảng `loai_phong`
 --
 
-INSERT INTO `loai_phong` (`id_loaiphong`, `ten_loaiphong`, `ghi_chu`) VALUES
-(1, 'Lý thuyết', ''),
-(2, 'Thực hành máy tính', ''),
-(3, 'Xưởng điện', ''),
-(4, 'Xưởng cơ khí', '');
+INSERT INTO `loai_phong` (`id_loaiphong`, `ten_loaiphong`, `ten_loaiphong_khongdau`, `ghi_chu`) VALUES
+(1, 'Lý thuyết', 'Ly-thuyet', ''),
+(2, 'Thực hành máy tính', 'Thuc-hanh-may-tinh', ''),
+(3, 'Xưởng điện', 'Xuong-dien', ''),
+(4, 'Xưởng cơ khí', 'Xuong-co-khi', '');
 
 -- --------------------------------------------------------
 
@@ -136,8 +145,39 @@ CREATE TABLE `phong_hoc` (
   `id_phonghoc` int(11) NOT NULL,
   `id_loaiphong` int(11) NOT NULL,
   `ten_phonghoc` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `ten_phonghoc_khongdau` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `hinh_anh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Phòng học';
+
+--
+-- Đang đổ dữ liệu cho bảng `phong_hoc`
+--
+
+INSERT INTO `phong_hoc` (`id_phonghoc`, `id_loaiphong`, `ten_phonghoc`, `ten_phonghoc_khongdau`, `hinh_anh`) VALUES
+(1, 2, 'Phòng B002A', 'B002A', 'Phong-B002A.jpg'),
+(2, 2, 'Phòng B002B', 'B002B', 'Phong-B002B.jpg'),
+(3, 2, 'Phòng B002C', 'B002C', 'Phong-B002C.jpg'),
+(4, 2, 'Phòng B101A', 'B101A', 'Phong-B101A.jpg'),
+(5, 2, 'Phòng B101B', 'B101B', 'Phong-B101B.jpg'),
+(6, 2, 'Phòng B102A', 'B102A', 'Phong-B102A.jpg'),
+(7, 2, 'Phòng B102B', 'B102B', 'Phong-B102B.jpg'),
+(8, 2, 'Phòng B103A', 'B103A', 'Phong-B103A.jpg'),
+(9, 2, 'Phòng B103B', 'B103B', 'Phong-B103B.jpg'),
+(10, 2, 'Phòng B112', 'B112', 'Phong-B112.jpg'),
+(11, 2, 'Phòng B113', 'B113', 'Phong-B113.jpg'),
+(12, 2, 'Phòng B201A', 'B201A', 'Phong-B201A.jpg'),
+(13, 2, 'Phòng B201B', 'B201B', 'Phong-B201B.jpg'),
+(14, 2, 'Phòng B202A', 'B202A', 'Phong-B202A.jpg'),
+(15, 2, 'Phòng B202B', 'B202B', 'Phong-B202B.jpg'),
+(16, 2, 'Phòng B203A', 'B203A', 'Phong-B203A.jpg'),
+(17, 2, 'Phòng B203B', 'B203B', 'Phong-B203B.jpg'),
+(18, 2, 'Phòng B209A', 'B209A', 'Phong-B209A.jpg'),
+(19, 2, 'Phòng B209B', 'B209B', 'Phong-B209B.jpg'),
+(20, 2, 'Phòng B301A', 'B301A', 'Phong-B301A.jpg'),
+(21, 2, 'Phòng B301B', 'B301B', 'Phong-B301B.jpg'),
+(22, 2, 'Phòng B304', 'B304', 'Phong-B304.jpg'),
+(23, 2, 'Phòng B305', 'B305', 'Phong-B305.jpg'),
+(24, 2, 'Phòng B306', 'B306', 'Phong-B306.jpg');
 
 -- --------------------------------------------------------
 
@@ -160,7 +200,7 @@ CREATE TABLE `slide` (
 
 INSERT INTO `slide` (`idslide`, `Ten`, `hinh`, `link`, `created_at`, `updated_at`) VALUES
 (1, 'Trường CĐ công nghệ Thủ Đức', 'Lasan1.jpg', 'Truong-cao-dang-cong-nghe-Thu-Duc', NULL, NULL),
-(2, 'Trường CĐ công nghệ Thủ Đức', 'Lasan1.jpg', 'Truong-cao-dang-cong-nghe-Thu-Duc', NULL, NULL),
+(2, 'Trường CĐ công nghệ Thủ Đức', 'Lasan2.jpg', 'Truong-cao-dang-cong-nghe-Thu-Duc', NULL, NULL),
 (3, 'Trường CĐ công nghệ Thủ Đức', 'Lasan1.jpg', 'Truong-cao-dang-cong-nghe-Thu-Duc', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -188,6 +228,27 @@ CREATE TABLE `vi_tri` (
   `khu` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `tang` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `vi_tri`
+--
+
+INSERT INTO `vi_tri` (`id_vitri`, `dia_diem`, `khu`, `tang`) VALUES
+(1, 'Khu -A - Tầng trệt', 'A', 'trệt'),
+(2, 'Khu -A - Tầng 1', 'A', '1'),
+(3, 'Khu -A - Tầng 2', 'A', '2'),
+(4, 'Khu -A - Tầng 3', 'A', '3'),
+(5, 'Khu -B - Tầng trệt', 'B', 'trệt'),
+(6, 'Khu -B - Tầng 1', 'B', '1'),
+(7, 'Khu -B - Tầng 2', 'B', '2'),
+(8, 'Khu -B - Tầng 3', 'B', '3'),
+(9, 'Khu -B - Tầng 4', 'B', '4'),
+(10, 'Khu -C - Tầng trệt', 'C', 'trệt'),
+(11, 'Khu -C - Tầng 1', 'C', '1'),
+(12, 'Khu -C - Tầng 2', 'C', '2'),
+(13, 'Khu -H - Tầng trệt', 'H', 'trệt'),
+(14, 'Khu -H - Tầng 1', 'H', '1'),
+(15, 'Khu -H - Tầng 3', 'H', '3');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -263,7 +324,7 @@ ALTER TABLE `vi_tri`
 -- AUTO_INCREMENT cho bảng `chitiet_phonghoc`
 --
 ALTER TABLE `chitiet_phonghoc`
-  MODIFY `id_chitiet_ph` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_chitiet_ph` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `chitiet_thietbi`
@@ -287,13 +348,13 @@ ALTER TABLE `nguoi_dung`
 -- AUTO_INCREMENT cho bảng `phanhoi_phonghoc`
 --
 ALTER TABLE `phanhoi_phonghoc`
-  MODIFY `id_phanhoi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_phanhoi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `phong_hoc`
 --
 ALTER TABLE `phong_hoc`
-  MODIFY `id_phonghoc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_phonghoc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `slide`
@@ -305,13 +366,13 @@ ALTER TABLE `slide`
 -- AUTO_INCREMENT cho bảng `thiet_bi`
 --
 ALTER TABLE `thiet_bi`
-  MODIFY `id_thietbi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_thietbi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `vi_tri`
 --
 ALTER TABLE `vi_tri`
-  MODIFY `id_vitri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_vitri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
