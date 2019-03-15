@@ -8,16 +8,33 @@
         <a class="nav-link" href="index.php"><i class="fas fa-1x fa-home"></i><span class="sr-only">(current)</span><br>Home</a>
       </li>
       <!-- Menu 1 cấp-->
-            <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>Loại phòng
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="http://google.com">Thực hành máy tính</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">B002A</a></li>
-              <li><a class="dropdown-item" href="#">B002B</a></li>
-            </ul>
-          </li>
+              <?php
+                  foreach ($menu as $mn) {
+              ?>
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#"><?php echo $mn->ten_loaiphong;?></a>
+                <ul class="dropdown-menu">
+                  <?php
+                  $phong_hoc=explode(',',$mn->phong_hoc);
+                  //print_r($phong_hoc);
+                  foreach ($phong_hoc as $ph) {
+                    list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$ph);
+                  
+                  ?>
+                    <li><a class="dropdown-item" href="#"><?=$ten_phonghoc_khongdau;?></a></li>
+                  <?php
+                    }
+                  ?>
+                  
+                </ul>
+            </li>
+              <?php
+                    }
+              ?>
+            
         </ul>
       </li>
 

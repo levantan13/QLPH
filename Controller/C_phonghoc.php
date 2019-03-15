@@ -7,7 +7,8 @@ class C_phonghoc
 	{
 		$m_phonghoc=new M_phonghoc();
 		$slide=$m_phonghoc->getSlide();
-		return array('slide'=>$slide);
+		$menu=$m_phonghoc->getMenu();
+		return array('slide'=>$slide,'menu'=>$menu);
 	}
 }
 ?>

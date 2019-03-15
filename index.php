@@ -1,9 +1,12 @@
-    <?php
+<?php
       include("Controller/C_phonghoc.php");
       $c_phong_hoc=new C_phonghoc();
       $noi_dung=$c_phong_hoc->index();
+
       $slide=$noi_dung['slide'];
-    ?>
+      $menu=$noi_dung['menu'];
+      //print_r($menu);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,23 +91,5 @@
     ?>
   </div>
   <!-- End Footer -->
-  <script>
-    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-  if (!$(this).next().hasClass('show')) {
-    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-  }
-  var $subMenu = $(this).next(".dropdown-menu");
-  $subMenu.toggleClass('show');
-
-
-  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-    $('.dropdown-submenu .show').removeClass("show");
-  });
-
-
-  return false;
-});
-
-  </script>
 </body>
 </html>
