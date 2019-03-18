@@ -28,7 +28,7 @@
 </head>
 <body>
   <!--Baner top-->
-<div class="container-fluid header">
+<div class="container-fluid paddingall">
       <?php
         require("view/banertop.php");
       ?>
@@ -79,7 +79,7 @@
 <!-- End Menu center-->
 
   <!-- Page Content -->
-   <div class="container-fluid header">
+   <div class="container-fluid paddingall">
  <?php 
        require("view/v_ph_thuchanh_maytinh.php");?>
   </div>
