@@ -4,14 +4,14 @@
     ?>
   <div>
     <ul class="nav nav-tabs text-white">
-    <li class="nav-item border border-bottom-0">
+    <li class="nav-item border border-dark border-bottom-0">
       <h4 class="nav-link active font-weight-bold">Phòng học <?=$mn->ten_loaiphong;?></h4>
     </li>
   </ul>
   </div>
 
   <!-- Tab panes -->
-  <div class="tab-content border  border-primary paddingcontent">
+  <div class="tab-content border border-dark paddingcontent">
     <div class="container-fluid tab-pane active"><br>
         <div class="row">
       <!--vòng lặp foreach-->
