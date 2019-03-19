@@ -7,7 +7,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php"><i class="fas fa-1x fa-home"></i><span class="sr-only">(current)</span><br>Home</a>
       </li>
-      <!-- Menu 1 cấp-->
+      <!-- Menu theo loại phòng-->
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>Loại phòng
         </a>
@@ -24,7 +24,7 @@
                     list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$ph);
                   
                   ?>
-                    <li><a class="dropdown-item" href="#"><?=$ten_phonghoc_khongdau;?></a></li>
+                    <li><a class="dropdown-item" href="./v_ph_chitiet.php?key=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
                   <?php
                     }
                   ?>
@@ -38,36 +38,39 @@
         </ul>
       </li>
 
-		<!--En Menu 1 cấp-->
+		<!-- Menu theo loại phòng-->
 					
-      <!--Menu 2 cấp-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>P.Máy tính
-        </a>
+    
+<!-- Menu phòng theo loại khu vực-->
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>Phòng học theo khu</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Submenu</a></li>
-              <li><a class="dropdown-item" href="#">Submenu0</a></li>
-              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+              <?php
+                  foreach ($menukhuvuc as $mnkv) {
+              ?>
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#"><?php echo $mnkv->dia_diem;?></a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
-                  <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                  <?php
+                  $kv_phong=explode(',',$mnkv->kv_phong);
+                  //print_r($phong_hoc);
+                  foreach ($kv_phong as $kvph) {
+                    list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$kvph);
+                  
+                  ?>
+                    <li><a class="dropdown-item" href="#"><?=$ten_phonghoc_khongdau;?></a></li>
+                  <?php
+                    }
+                  ?>
+                  
                 </ul>
-              </li>
-              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
-                  <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+            </li>
+              <?php
+                    }
+              ?>
+            
         </ul>
       </li>
-       <!--End Menu 2 cấp-->
-    </ul>
-  </div>
+<!-- End Menu phòng theo loại khu vực-->    
+</ul>
+</div>
 </nav>

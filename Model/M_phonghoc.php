@@ -10,20 +10,25 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}
 
-	public function getMenu()
+	public function getMenuKhuvuc()
 	{
-		$sql="select lp.*, GROUP_CONCAT(ph.id_phonghoc,':',ph.ten_phonghoc_khongdau) AS phong_hoc from loai_phong lp INNER JOIN phong_hoc ph ON lp.id_loaiphong=ph.id_loaiphong GROUP BY lp.id_loaiphong ";
+		$sql="select vt.*, GROUP_CONCAT(ph.id_phonghoc,':',ph.ten_ph_khongdau) AS kv_phong from vi_tri vt INNER JOIN phong_hoc ph ON vt.id_vitri=ph.id_vitri GROUP BY vt.id_vitri";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
 
-
-	public function getPH_theoIDPH($id_phonghoc)
+		public function getMenu()
 	{
-		$sql="select * from phong_hoc where id_phonghoc=?";
+		$sql="select lp.*, GROUP_CONCAT(DISTINCT ph.id_phonghoc,':',ph.ten_ph_khongdau) AS phong_hoc from loai_phong lp INNER JOIN phong_hoc ph ON lp.id_loaiphong=ph.id_loaiphong GROUP BY lp.id_loaiphong";
 		$this->setQuery($sql);
-		$param=array($id_phonghoc);
-		return $this->loadRow($param);
+		return $this->loadAllRows();
+	}	
+
+	public function getchitietph($key)
+	{
+		$sql="select * from phong_hoc where id_phonghoc=$key";
+		$this->setQuery($sql);
+		return $this->loadRow(array($key));
 	}
 	//Quản trị
 }

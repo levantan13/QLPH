@@ -19,18 +19,18 @@
                   $phong_hoc=explode(',',$mn->phong_hoc);
                   //print_r($phong_hoc);
                   foreach ($phong_hoc as $ph) {
-                    list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$ph);
+                    list($id_phonghoc, $ten_ph_khongdau)=explode(':',$ph);
                   ?>
       <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
         <div class="card border ">
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
           <div class="card-header">
-            <h5 class="text-primary">Phòng <?=$ten_phonghoc_khongdau;?></h5>
+            <h5 class="text-primary">Phòng <?=$ten_ph_khongdau;?></h5>
             </div>
             <div class="card-body">
-              <a href="#"><span><i class="fas fa-7x fa-door-open"></i></span></a>
-              <p class="text-justify">phòng học đồ hoạ</p>
-                         
+              <a href="./v_ph_chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-door-open"></i></span></a>
+              <p class="text-justify">Mô tả ngắn</p>
+      
             </div>
             <div class="card-footer">
               <h6 class="card-title text-primary font-weight-bold"><a href="#">Xem chi tiết</a></h6>

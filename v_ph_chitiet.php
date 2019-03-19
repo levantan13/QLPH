@@ -1,12 +1,8 @@
 <?php
       include("Controller/C_phonghoc.php");
       $c_phong_hoc=new C_phonghoc();
-      $noi_dung=$c_phong_hoc->index();
-
-      $slide=$noi_dung['slide'];
-      $menu=$noi_dung['menu'];
-      $menukhuvuc=$noi_dung['menukhuvuc'];
-      //print_r($menukhuvuc);
+      $noi_dung=$c_phong_hoc->chitietphonghoc();
+      $chitietph=$noi_dung['chitietph'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,72 +21,33 @@
   <script src="view/bootstrap/js/jquery.min.js"></script>
   <script src="view/bootstrap/js/bootstrap.min.js"></script>
   <script src="view/bootstrap/js/script.js"></script>
-  
 </head>
 <body>
-  <!--Baner top-->
-<div class="container-fluid paddingall">
-      <?php
-        require("view/banertop.php");
-      ?>
-</div>
+	
+	<div class="container-fluid">
+		<?php require("view/banertop.php"); ?>
+	</div>
+	<div class="container-fluid content border border-dark">
+				<div class="row">
+			<div class="col-xl-8 col-md-8 col-sm-6 mb-4">
+				<div>
+					<h1 class="text-left">Thông Tin <?=$chitietph->ten_phonghoc?></h1>
+					<h4 class="text-left"><?=$chitietph->mo_ta_ngan_ph?></h4>
+					<p class="text-justify"><?=$chitietph->mo_ta_chi_tiet_ph?></p>
+				</div>
+				<div>
+					<?php require("view/form_phanhoi.php");?>
+				</div>
 
-  <!--End Baner top -->
-
-  <!-- Menu -->
-<div class="container-fluid sticky-top">
-      <?php
-        require("view/menu_top.php");
-      ?>
-  </div>
-  <!-- End Menu -->
-
-<div class="container-fluid content">
-<div class="row">
-  <!--Left-->
-  <div class="col-lg-3 border border-primary">
-    <div class="card">
-      <div class="card-head border border-primary">
-        <h5>Thông báo 1</h5>
-      </div>
-      <div class="card-body">
-        <a href="#">Thông tin phản hồi phòng học ?</a>
-      </div>
-      
-    </div> 
-    
-
-  </div>
-  <!--End Left-->
-
-  <!-- Slide-->
-  <div class="col-lg-9 border border-primary">
-    <?php
-      require("view/main_slide.php");
-    ?>
-  </div>
-  <!-- End Slide -->
-
-</div>
-</div>
-<!-- Menu center-->
-<div class="container-fluid">
- 
-</div>
-<!-- End Menu center-->
-
-  <!-- Page Content -->
-   <div class="container-fluid paddingall">
- <?php 
-       require("view/v_phonghoc.php");?>
-  </div>
-  <!-- End Page Content -->
-  <!-- Footer -->
-  <div class="container-fluid">
-    <?php
-      require("view/Footer.php");
-    ?>
-  </div>
-  <!-- End Footer -->
+			</div>
+			<div class="col-xl-4 col-md-4 border border-warning">
+				
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div><?php require("view/footer.php");?></div>
+		<div><a class="text-white font-weight-bold" href="index.php">Quay lại trang chủ</a></div>
+	</div>
 </body>
 </html>
