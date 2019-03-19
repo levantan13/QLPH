@@ -6,7 +6,7 @@
       $slide=$noi_dung['slide'];
       $menu=$noi_dung['menu'];
       $menukhuvuc=$noi_dung['menukhuvuc'];
-      //print_r($menukhuvuc);
+      print_r($menu);
 ?>
 <!DOCTYPE html>
 <html lang="en">
