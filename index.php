@@ -5,6 +5,7 @@
       $slide=$noi_dung['slide'];
       $menu=$noi_dung['menu'];
       $menukhuvuc=$noi_dung['menukhuvuc'];
+      //print_r($menu);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,9 +69,7 @@
 </div>
 <!-- Menu center-->
 <div class="container-fluid">
-     <?php
-      require("view/menutest.php");
-    ?>
+
 </div>
 <!-- End Menu center-->
 

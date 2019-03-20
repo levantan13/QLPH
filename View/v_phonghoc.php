@@ -28,7 +28,7 @@
             <h5 class="text-primary">Phòng <?=$ten_ph_khongdau;?></h5>
             </div>
             <div class="card-body">
-              <a href="./v_ph_chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-door-open"></i></span></a>
+              <a href="./chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-door-open"></i></span></a>
               <p class="text-justify"></p>
       
             </div>
