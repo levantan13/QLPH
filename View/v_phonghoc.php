@@ -29,7 +29,7 @@
             </div>
             <div class="card-body">
               <a href="./v_ph_chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-door-open"></i></span></a>
-              <p class="text-justify"><?=$mn->mo_ta_ngan_ph?></p>
+              <p class="text-justify"></p>
       
             </div>
             <div class="card-footer">
