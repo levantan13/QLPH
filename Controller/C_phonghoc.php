@@ -9,8 +9,11 @@ class C_phonghoc
 		$slide=$m_phonghoc->getSlide();
 		$menu=$m_phonghoc->getMenu();
 		$menukhuvuc=$m_phonghoc->getMenuKhuvuc();
-		return array('slide'=>$slide,'menu'=>$menu,'menukhuvuc'=>$menukhuvuc);
+		$loaiph=$m_phonghoc->getloaiph();
+		$phonghoc=$m_phonghoc->getph();
+		return array('slide'=>$slide,'menu'=>$menu,'menukhuvuc'=>$menukhuvuc, 'loaiph'=>$loaiph,'phonghoc'=>$phonghoc);
 	}
+
 	public function chitietphonghoc()
 	{
 		$key=$_GET["key"];
@@ -18,5 +21,6 @@ class C_phonghoc
 		$chitietph=$m_phonghoc->getchitietph($key);
 		return array('chitietph'=>$chitietph);
 	}
+
 }
 ?>

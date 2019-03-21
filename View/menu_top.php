@@ -5,11 +5,11 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav text-center">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php"><i class="fas fa-1x fa-home"></i><span class="sr-only">(current)</span><br>Home</a>
+        <a class="nav-link" href="index.php"><i class="fas fa-2x fa-home"></i><span class="sr-only">(current)</span><br>Home</a>
       </li>
       <!-- Menu theo loại phòng-->
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>Loại phòng
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-2x fa-list-ul"></i><br>Loại phòng
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <?php
@@ -24,7 +24,7 @@
                     list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$ph);
                   
                   ?>
-                    <li><a class="dropdown-item" href="./v_ph_chitiet.php?key=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
+                    <li><a class="dropdown-item" href="./chitiet.php?key=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
                   <?php
                     }
                   ?>
@@ -43,7 +43,7 @@
     
 <!-- Menu phòng theo loại khu vực-->
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-1x fa-desktop"></i><br>Phòng học theo khu</a>
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-2x fa-map-marked"></i><br>Phòng học theo khu</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <?php
                   foreach ($menukhuvuc as $mnkv) {

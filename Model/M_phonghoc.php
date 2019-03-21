@@ -24,6 +24,19 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}	
 
+	public function getloaiph()
+	{
+		$sql="select * from loai_phong";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
+		public function getph()
+	{
+		$sql="select * from phong_hoc";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
+
 	public function getchitietph($key)
 	{
 		$sql="select * from phong_hoc where id_phonghoc=$key";

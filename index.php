@@ -5,7 +5,9 @@
       $slide=$noi_dung['slide'];
       $menu=$noi_dung['menu'];
       $menukhuvuc=$noi_dung['menukhuvuc'];
-      //print_r($menu);
+      $loaiph=$noi_dung['loaiph'];
+      $phonghoc=$noi_dung['phonghoc'];
+      //print_r($phonghoc);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,5 +93,6 @@
    <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
   <script src="view/bootstrap/js/bootstrap.min.js"></script>
   <script src="view/bootstrap/js/script.js"></script>
+  <script src="view/bootstrap/js/popper.min.js"></script>
  </body>
 </html>

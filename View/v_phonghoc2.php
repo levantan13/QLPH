@@ -1,34 +1,65 @@
   <!-- Nav pills -->
-  <ul class="nav nav-pills" role="tablist">
+  <ul class="nav nav-pills nav-tabs-justified" role="tablist">
     <?php
-                  foreach ($menu as $mn) {
+                  for($i=0;$i<count($loaiph);$i++) {
+                    if($i==0) {
     ?>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#home"><?=$mn->ten_loaiphong;?></a>
+      <a class="nav-link active" data-toggle="pill" href="#home<?=$loaiph[$i]->id_loaiphong?>"><?=$loaiph[$i]->ten_loaiphong;?></a>
     </li>
-          <?php
-    
-          }
-        ?>
+      <?php
+        } 
+        else {
+    ?>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu<?=$loaiph[$i]->id_loaiphong?>"><?=$loaiph[$i]->ten_loaiphong;?></a>
+    </li>
+    <?php
+    }
+  }
+    ?>
   </ul>
 
 <!-- Tab panes -->
   <div class="tab-content">
-     <?php
+
+    <div id="home1" class="container tab-pane active"><br>
+            <div class="row">
+      <!--vòng lặp foreach-->
+                    <?php
+                  foreach ($menu as $mn) {
+              ?>
+      <?php 
+                  print_r($mn);
                   $phong_hoc=explode(',',$mn->phong_hoc);
-                  //print_r($phong_hoc);
+                  print_r($phong_hoc);
                   foreach ($phong_hoc as $ph) {
                     list($id_phonghoc, $ten_ph_khongdau)=explode(':',$ph);
                   ?>
-    
-    <div id="home" class="container tab-pane"><br>
-     <h3>Phòng <?=$ten_ph_khongdau;?></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <?php
-    
+      <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+        <div class="card border ">
+          <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
+          <div class="card-header">
+            <h5 class="text-primary">Phòng <?=$ten_ph_khongdau;?></h5>
+            </div>
+            <div class="card-body">
+              <a href="./chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-door-open"></i></span></a>
+              <p class="text-justify"></p>
+      
+            </div>
+            <div class="card-footer">
+              <h6 class="card-title text-primary font-weight-bold"><a href="#">Xem chi tiết</a></h6>
+            </div>
+          </div>
+        </div>
+        <?php
           }
+        }
         ?>
+        <!--kết thúc vòng lặp-->
+      </div>
     </div>
+
     <div id="menu1" class="container tab-pane fade"><br>
       <h3>Menu 1</h3>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
