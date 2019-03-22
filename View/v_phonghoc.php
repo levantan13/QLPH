@@ -25,30 +25,9 @@
           <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
 
             <div class="card-body">
-              <?php
-              $lp=$mn->id_loaiphong;
-              print_r($lp);
-              switch ($lp)
-              
-  {
-    case 1 :
+
          <a href="./chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-school"></i></span></a>
               <br>
-        break;
-    case 1:
-        echo 'Số một';
-        break;
-    case 2:
-        echo 'Số hai';
-        break;
-    case 3:
-        echo 'Số ba';
-        break;
-    default:
-        echo 'Không tìm thấy';
-        break;
-}
-?>
               <h5 class="text-primary">Phòng <?=$ten_ph_khongdau;?></h5>
               <hr>
                   <?php
