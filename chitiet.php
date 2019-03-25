@@ -43,6 +43,7 @@
 					<h4 class="text-left"><?=$chitietph->mo_ta_ngan_ph?></h4>
 					<p class="text-justify"><?=$chitietph->mo_ta_chi_tiet_ph?></p>
 				</div>
+				<hr>
 				<div>
 					<?php require("view/form_phanhoi.php");?>
 				</div>
