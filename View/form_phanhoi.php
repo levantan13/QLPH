@@ -5,33 +5,44 @@
                     <form role="form">
                         <div class="form-group">
                             <textarea class="form-control" rows="3" placeholder="Viết phản hồi <?=$chitietph->ten_phonghoc?>"></textarea>
+                <div class="bg-dark text-white clearfix">
+                    <div class="float-left bg-danger">
+                        <h5>Ý kiến phản hồi</h5>
+                     </div>
+                     <div class="float-right bg-info">
+                        <p><a href="#"> Mới nhất</a> || <a href="#"> Cũ nhất</a></p>
+                     </div>
+                </div>
+                <div class="clearfix">
+                        <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Viết thông tin phản hồi"></textarea>
                         </div>
-                        <div class="float-right"><button type="submit" class="btn btn-primary">Gửi</button> || <input class="btn btn-primary" type="reset"></div>
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-primary text-right">Gửi</button> || <input class="btn btn-primary" type="reset">
+                        </div>
                     </form>
   				</div>
-                <!-- Posted Comments -->
+    
+               <!-- Posted Comments -->
                 <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
+                <hr>
+                <div class="clearfix">
+                    <div class="text-justify">
+                        <p>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </p>
                     </div>
-                </div>
-                <!-- Comment -->
-                <div class="media text-left">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
+                    <div>
+                    <div class="float-left comment">
+                    <a href="#">
+                        <img src="http://placehold.it/64x64" alt="">
+                        </a>
+                            <h4>User name</h4>
+                     </div>
+                     <div class="float-right">
+                        <p><a href="#"> Mới nhất</a> || <a href="#"> Cũ nhất</a></p>
+                     </div>
+                     </div>
+
                

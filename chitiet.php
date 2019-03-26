@@ -28,11 +28,14 @@
 		<?php require("view/banertop.php"); ?>
 	</div>
 	<!-- Menu top -->
-		<div class="container-fluid sticky-top">
+	<div class="container-fluid sticky-top">
 		<?php require("view/menu_top.php"); ?>
 	</div>
+	</div>
+	<div>
+
 	<!-- content -->
-	<div class="container-fluid paddingall">
+	<div class="container-fluid">
 			<div class="row">
 				<!-- Content left -->
 			<div class="col-xl-8 col-md-8 col-sm-6 mb-4">
@@ -43,6 +46,7 @@
 					<h4 class="text-left"><?=$chitietph->mo_ta_ngan_ph?></h4>
 					<p class="text-justify"><?=$chitietph->mo_ta_chi_tiet_ph?></p>
 				</div>
+				<hr>
 				<div>
 					<?php require("view/form_phanhoi.php");?>
 				</div>
@@ -52,14 +56,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
-		<div><?php require("view/footer.php");?></div>
-		<div><a class="text-white font-weight-bold" href="index.php">Quay lại trang chủ</a></div>
+	<!-- End Content-->
+	<div>
+				<?php require("view/footer.php");?>
 	</div>
+</body>
 <script src="view/bootstrap/js/jquery.min.js"></script>
 <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
 <script src="view/bootstrap/js/bootstrap.min.js"></script>
 <script src="view/bootstrap/js/script.js"></script>
 <script src="view/bootstrap/js/popper.min.js"></script>
-</body>
 </html>

@@ -1,5 +1,4 @@
 .paddingall { padding-bottom: 1px !important; }
-.paddingcontent { margin-bottom: 5px !important; }
 
 .menutop li { border: 1px solid; border-color: white; margin-right: 2px !important; }
 .menutop li li:hover { background: blue; color: red; }
@@ -11,23 +10,6 @@
 .phcontent { margin-top: 5px !important; }
 .phcontent nav { padding: 2px; }
 
-.navbar-nav li:hover > ul.dropdown-menu {
-    display: block;
-}
-.dropdown-submenu {
-    position:relative;
-}
-.dropdown-submenu>.dropdown-menu {
-    top:0;
-    left:100%;
-    margin-top:-6px;
-}
-
-/* rotate caret on hover */
-.dropdown-menu > li > a:hover:after {
-    text-decoration: underline;
-    transform: rotate(-90deg);
-} 
-
+.comment nav h6 { margin-top: 8px; margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,6 +22,7 @@
   <link rel="stylesheet" type="text/css" href="view/bootstrap/font/css/all.min.css">
   <link rel="icon" href="images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+
   
 </head>
 <body>
@@ -89,11 +90,11 @@
     ?>
   </div>
   <!-- End Footer -->
-
   <script src="view/bootstrap/js/jquery.min.js"></script>
-   <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
+  <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
   <script src="view/bootstrap/js/bootstrap.min.js"></script>
   <script src="view/bootstrap/js/script.js"></script>
-  <script src="view/bootstrap/js/popper.min.js"></script>
+
+  
  </body>
 </html>
