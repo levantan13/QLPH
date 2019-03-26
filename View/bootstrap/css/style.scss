@@ -1,4 +1,4 @@
-.header{
+.paddingall{
 	padding-bottom: 1px !important;
 }
 .menutop
@@ -39,7 +39,11 @@
 	}
 	margin-top:5px !important;
 }
-.commnent
-{
-
+.comment{ 
+	nav{
+		h6{
+			margin-top: 8px;
+			margin-left: 10px;
+		}
+	}
 }

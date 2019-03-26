@@ -1,4 +1,4 @@
-.header { padding-bottom: 1px !important; }
+.paddingall { padding-bottom: 1px !important; }
 
 .menutop li { border: 1px solid; border-color: white; margin-right: 2px !important; }
 .menutop li li:hover { background: blue; color: red; }
@@ -9,5 +9,7 @@
 
 .phcontent { margin-top: 5px !important; }
 .phcontent nav { padding: 2px; }
+
+.comment nav h6 { margin-top: 8px; margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

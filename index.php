@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="view/bootstrap/font/css/all.min.css">
   <link rel="icon" href="images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+
   
 </head>
 <body>
@@ -92,7 +93,7 @@
   <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
   <script src="view/bootstrap/js/bootstrap.min.js"></script>
   <script src="view/bootstrap/js/script.js"></script>
-  <script src="view/bootstrap/js/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  
  </body>
 </html>
