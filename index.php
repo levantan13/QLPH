@@ -7,7 +7,7 @@
       $menukhuvuc=$noi_dung['menukhuvuc'];
       //$loaiph=$noi_dung['loaiph'];
       $phonghoc=$noi_dung['phonghoc'];
-      $thanh_phantrang=$noi_dung['thanh_phantrang'];
+      //$thanh_phantrang=$noi_dung['thanh_phantrang'];
       //print_r($phonghoc);
 ?>
 <!DOCTYPE html>
@@ -90,11 +90,12 @@
     ?>
   </div>
   <!-- End Footer -->
-  <script src="view/bootstrap/js/jquery.min.js"></script>
-  <script src="view/bootstrap/js/bootstrap.bundle.min"></script>
+  <script src="view/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="view/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="view/bootstrap/js/bootstrap.min.js"></script>
+  <script src="view/bootstrap/js/popper.min.js"></script>
+  <script src="view/bootstrap/js/jquery.min.js"></script>
   <script src="view/bootstrap/js/script.js"></script>
 
-  
  </body>
 </html>

@@ -38,7 +38,7 @@
 	<div class="container-fluid">
 			<div class="row">
 				<!-- Content left -->
-			<div class="col-xl-8 col-md-8 col-sm-6 mb-4">
+			<div class="col-xl-9 col-md-8 col-sm-6 mb-4">
 				<div>
 					<!-- Preview Image -->
                	    <img class="d-block w-100 h-25" src="images/lasan1.jpg" alt="">
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<!-- content right -->
-			<div class="col-xl-4 col-md-4">
+			<div class="col-xl-3 col-md-4">
 			</div>
 		</div>
 	</div>

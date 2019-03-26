@@ -10,15 +10,14 @@ class C_phonghoc
 		$slide=$m_phonghoc->getSlide();
 		$menu=$m_phonghoc->getMenu();
 		$menukhuvuc=$m_phonghoc->getMenuKhuvuc();
-
-		$trang_hientai=(isset($_GET['page']))?$_GET['page']:1;
+		/*$trang_hientai=(isset($_GET['page']))?$_GET['page']:1;
 		$pagination=new pagination(count($phonghoc),$trang_hientai,3,2);
 		$paginationhtml=$pagination->showPagination();
 		$limit=$pagination->$_nItemOnPage;
 		$vitri=($trang_hientai-1)*$limit;
-		$phonghoc=$m_phonghoc->getphbyidloaiph($idlp,$vitri,$limit);
+		$phonghoc=$m_phonghoc->getphbyidloaiph($idlp,$vitri,$limit);*/
 		$phonghoc=$m_phonghoc->getph();
-		return array('slide'=>$slide,'menu'=>$menu,'menukhuvuc'=>$menukhuvuc,'phonghoc'=>$phonghoc,'thanh_phantrang'=>$paginationhtml);
+		return array('slide'=>$slide,'menu'=>$menu,'menukhuvuc'=>$menukhuvuc,'phonghoc'=>$phonghoc);//,'thanh_phantrang'=>$paginationhtml);
 	}
 
 	public function chitietphonghoc()
