@@ -22,14 +22,28 @@
                   ?>
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="card border ">
-          <!--  <a href="page/chitietPM.php"><img class="card-img-top" src="http://placehold.it/700x400" alt="Phòng B002A"></a>-->
-
             <div class="card-body">
-
-         <a href="./chitiet.php?key=<?=$id_phonghoc?>"><span><i class="fas fa-7x fa-school"></i></span></a>
+              <!-- xuất hình bằng font-->
+          <?php 
+          $i_d=$mn->id_loaiphong;
+          $str = htmlentities('<a href="./chitiet.php?id=');
+          $str1=htmlentities('"><span><i class="fas fa-7x fa-school"></i></span></a>');
+          $str2 = htmlentities('"><span><i class="fas fa-7x fa-desktop"></i></span></a>');
+          switch ($i_d) {
+            case 1:
+                 echo html_entity_decode($str.$id_phonghoc.$str1); 
+              break;
+              default:
+                echo html_entity_decode($str.$id_phonghoc.$str2);
+              break;           
+           }
+          ?>
+              <!--end xuất hình bằng font-->
+              <br>
               <br>
               <h5 class="text-primary">Phòng <?=$ten_ph_khongdau;?></h5>
               <hr>
+                <!-- xuất thông tin phòng-->
                   <?php
                   foreach ($phonghoc as $p_h) {
                     if($id_phonghoc==$p_h->id_phonghoc)
@@ -40,16 +54,17 @@
                   }
                 }
               ?>
+               <!-- end xuất thông tin phòng-->
             </div>
             <div class="card-footer">
-              <h6 class="card-title text-primary font-weight-bold"><a href="./chitiet.php?key=<?=$id_phonghoc?>">Xem chi tiết</a></h6>
+              <p class="card-title text-primary font-weight-bold text-justify"><a href="./chitiet.php?id=<?=$id_phonghoc?>">Xem chi tiết</a> | <a href="./chitiet.php?id=<?=$id_phonghoc?>"><i class="fas fa-comment-alt"></i></a><label> 123</label> | <a href="#"><i class="fas fa-phone-square"></i></a></p>
             </div>
           </div>
         </div>
         <?php
           }
         ?>
-        <!--kết thúc vòng lặp-->
+        <!--kết thúc vòng lặp -->
       </div>
 
       <!-- Pagination -->
@@ -76,10 +91,10 @@
           </a>
         </li>
       </ul>
-
     </div>
     </div>
-        <?php
+    <!--End vòng lặp lớn-->
+    <?php
         }
     ?>
 

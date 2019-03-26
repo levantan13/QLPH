@@ -1,10 +1,10 @@
  <!-- Blog Comments -->
                 <!-- Comments Form -->
                 <div>
-                    <h4 class="text-left">Viết phản hồi <?=$chitietph->ten_phonghoc?><span class="fa fa-glyphicon-pencil"></span></h4>
+                    <h4 class="text-left"><span class="fa fa-glyphicon-pencil"></span></h4>
                     <form role="form">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Viết phản hồi <?=$chitietph->ten_phonghoc?>"></textarea>
                         </div>
                         <div class="float-right"><button type="submit" class="btn btn-primary">Gửi</button> || <input class="btn btn-primary" type="reset"></div>
                     </form>

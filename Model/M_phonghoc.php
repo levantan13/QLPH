@@ -24,12 +24,17 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}	
 
-	public function getloaiph()
+		public function getphbyidloaiph($idlp,$vitri=-1,$limit=-1)
 	{
-		$sql="select * from loai_phong";
+		$sql="select * from loai_phong where id_loaiphong=$idlp";
+		if($vitri>-1 && $limit>1)
+		{
+			$sql.="limit $vitri,$limit";
+		}
 		$this->setQuery($sql);
-		return $this->loadAllRows();
+		return $this->loadAllRows(array($idlp));
 	}
+
 		public function getph()
 	{
 		$sql="select * from phong_hoc";
@@ -37,11 +42,11 @@ class M_phonghoc extends database
 		return $this->loadAllRows();
 	}
 
-	public function getchitietph($key)
+	public function getchitietph($id)
 	{
-		$sql="select * from phong_hoc where id_phonghoc=$key";
+		$sql="select * from phong_hoc where id_phonghoc=$id";
 		$this->setQuery($sql);
-		return $this->loadRow(array($key));
+		return $this->loadRow(array($id));
 	}
 	//Quản trị
 }

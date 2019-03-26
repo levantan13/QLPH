@@ -5,8 +5,9 @@
       $slide=$noi_dung['slide'];
       $menu=$noi_dung['menu'];
       $menukhuvuc=$noi_dung['menukhuvuc'];
-      $loaiph=$noi_dung['loaiph'];
+      //$loaiph=$noi_dung['loaiph'];
       $phonghoc=$noi_dung['phonghoc'];
+      $thanh_phantrang=$noi_dung['thanh_phantrang'];
       //print_r($phonghoc);
 ?>
 <!DOCTYPE html>

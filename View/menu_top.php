@@ -24,7 +24,7 @@
                     list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$ph);
                   
                   ?>
-                    <li><a class="dropdown-item" href="./chitiet.php?key=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
+                    <li><a class="dropdown-item" href="./chitiet.php?id=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
                   <?php
                     }
                   ?>
@@ -57,7 +57,7 @@
                     list($id_phonghoc, $ten_phonghoc_khongdau)=explode(':',$kvph);
                   
                   ?>
-                    <li><a class="dropdown-item" href="#"><?=$ten_phonghoc_khongdau;?></a></li>
+                    <li><a class="dropdown-item" href="./chitiet.php?id=<?=$id_phonghoc?>"><?=$ten_phonghoc_khongdau;?></a></li>
                   <?php
                     }
                   ?>
